@@ -62,6 +62,81 @@ button[kind="secondary"] { border:2px solid #222 !important; border-radius:12px 
 [data-testid="stSidebar"] { background:#eef5d8; border-right:3px solid #e51d24; }
 [data-testid="stSidebar"] img { margin:0 auto 10px auto; display:block; }
 hr { border-color:#d9c9a8 !important; }
+
+/* GRINCHMAS MOBILE READABILITY FIXES */
+
+/* Keep the existing sidebar design, improve text contrast */
+[data-testid="stSidebar"] {
+    background-color: #eef4d8 !important;
+}
+
+[data-testid="stSidebar"] *,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+    color: #35452d !important;
+    opacity: 1 !important;
+}
+
+/* Make sidebar navigation easier to read */
+[data-testid="stSidebar"] [role="radiogroup"] label {
+    color: #35452d !important;
+    opacity: 1 !important;
+}
+
+/* Improve secondary button contrast */
+.stButton button[kind="secondary"] {
+    background-color: #fff8e9 !important;
+    color: #29251f !important;
+    border: 2px solid #29251f !important;
+}
+
+/* Keep primary buttons festive and readable */
+.stButton button[kind="primary"] {
+    background-color: #d91f2b !important;
+    color: #ffffff !important;
+    border: 2px solid #29251f !important;
+}
+
+/* Improve form labels and input text */
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] p {
+    color: #35452d !important;
+    opacity: 1 !important;
+}
+
+.stTextInput input,
+.stNumberInput input {
+    color: #29251f !important;
+    background-color: #fffdf7 !important;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .block-container {
+        padding-left: 0.85rem !important;
+        padding-right: 0.85rem !important;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    [data-testid="stButton"] button {
+        min-height: 46px !important;
+        white-space: normal !important;
+    }
+
+    [data-testid="stSidebar"] {
+        width: 85vw !important;
+    }
+}
+
 </style>
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
