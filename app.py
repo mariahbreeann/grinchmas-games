@@ -301,7 +301,76 @@ hr { border-color:#d9c9a8 !important; }
         opacity: 1 !important;
     }
 }
+/* FINAL WHO-VILLE CONTRAST OVERRIDES */
 
+/* Game descriptions and informational cards */
+[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] span,
+[data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"],
+[data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"] p {
+    color: #35452d !important;
+    opacity: 1 !important;
+}
+
+/* Leaderboard notice */
+[data-testid="stAlert"] {
+    background-color: #fff0bd !important;
+    border: 2px solid #526b42 !important;
+}
+
+[data-testid="stAlert"] *,
+[data-testid="stAlert"] p,
+[data-testid="stAlert"] span,
+[data-testid="stAlert"] div {
+    color: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Team setup containers and input fields */
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input,
+[data-testid="stSelectbox"] div,
+[data-testid="stTextArea"] textarea {
+    background-color: #fffdf5 !important;
+    color: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Multiple choice answers */
+[data-testid="stRadio"] label,
+[data-testid="stRadio"] label *,
+[data-testid="stCheckbox"] label,
+[data-testid="stCheckbox"] label * {
+    color: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Top toolbar icons */
+[data-testid="stHeader"] button,
+[data-testid="stHeader"] button svg,
+[data-testid="stToolbar"] button,
+[data-testid="stToolbar"] button svg {
+    color: #35452d !important;
+    fill: #35452d !important;
+    opacity: 1 !important;
+}
+
+/* Sidebar expand/collapse toggle */
+[data-testid="collapsedControl"],
+[data-testid="stSidebarCollapsedControl"],
+[data-testid="collapsedControl"] button,
+[data-testid="stSidebarCollapsedControl"] button {
+    background-color: #e6efc9 !important;
+    border: 2px solid #35452d !important;
+    opacity: 1 !important;
+}
+
+[data-testid="collapsedControl"] svg,
+[data-testid="stSidebarCollapsedControl"] svg {
+    color: #35452d !important;
+    fill: #35452d !important;
+    opacity: 1 !important;
+}
 </style>
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
