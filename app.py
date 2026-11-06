@@ -931,7 +931,7 @@ elif nav == "Geopardy":
                     st.write(q["answer"])
                 c1, c2 = st.columns(2)
                 with c1:
-                    if st.button("✅ Correct! Add points", type="primary", use_container_width=True):
+                    if st.button("✅ Correct! Add points", type="secondary", use_container_width=True):
                         st.session_state.scores[names[active_idx]]["geo"] += q["value"]
                         st.session_state.geo_used.add(q["key"])
                         st.session_state.geo_active = None
