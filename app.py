@@ -103,7 +103,6 @@ CUSTOM_CSS = """
     border-color: #6b6252 !important;
 }
 
-<style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800;900&display=swap');
 :root { --grinch:#79b82a; --lime:#d6ed13; --red:#e51d24; --cream:#fff7e8; --evergreen:#17652d; --gold:#f5c62c; --ink:#171717; }
 .stApp { background:radial-gradient(circle at 15% 5%, #f1f8dc 0, #fff8e9 42%, #f8f0df 100%); color:var(--ink); }
@@ -371,6 +370,107 @@ hr { border-color:#d9c9a8 !important; }
     fill: #35452d !important;
     opacity: 1 !important;
 }
+
+/* FINAL CONTRAST PASS — descriptions, leaderboard, names, toolbar */
+.card,
+.card *,
+.hero,
+.hero *,
+.ribbon,
+.ribbon *,
+.question-box,
+.question-box *,
+.scoreboard,
+.scoreboard *,
+.score-team,
+.score-team span,
+.team-pill,
+.team-pill *,
+.small-muted,
+[data-testid="stMarkdownContainer"] .card,
+[data-testid="stMarkdownContainer"] .card * {
+    color: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Keep headings in the established holiday red/green palette. */
+h1, h2, h3 {
+    color: #9b1725 !important;
+    opacity: 1 !important;
+}
+
+/* Streamlit info/alert containers: style both wrapper and inner content. */
+[data-testid="stAlert"],
+[data-testid="stAlert"] > div,
+[data-testid="stAlert"] [data-testid],
+[data-testid="stAlert"] [data-testid="stMarkdownContainer"] {
+    background: #fff0bd !important;
+    color: #29251f !important;
+    border-color: #526b42 !important;
+    opacity: 1 !important;
+}
+[data-testid="stAlert"] *,
+[data-testid="stAlert"] svg {
+    color: #29251f !important;
+    fill: #29251f !important;
+    stroke: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Leaderboard bars and team labels. */
+.score-team,
+.score-team span {
+    color: #35452d !important;
+    font-weight: 900 !important;
+}
+.score-track {
+    background: #eee9dc !important;
+    border-color: #29251f !important;
+}
+.team-pill {
+    color: #29251f !important;
+    background: #fff8e9 !important;
+}
+.team-active {
+    color: #171717 !important;
+    background: #d8ed19 !important;
+}
+
+/* Game descriptions are raw HTML cards, so target the card itself. */
+div.card {
+    background: #fffaf0 !important;
+    color: #29251f !important;
+    border-color: #171717 !important;
+}
+div.card * {
+    color: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Top Streamlit toolbar and sidebar-toggle icons, including SVG paths. */
+[data-testid="stHeader"] button,
+[data-testid="stToolbar"] button,
+[data-testid="stHeader"] button *,
+[data-testid="stToolbar"] button *,
+[data-testid="collapsedControl"] button,
+[data-testid="stSidebarCollapsedControl"] button {
+    color: #35452d !important;
+    opacity: 1 !important;
+}
+[data-testid="stHeader"] svg,
+[data-testid="stToolbar"] svg,
+[data-testid="collapsedControl"] svg,
+[data-testid="stSidebarCollapsedControl"] svg,
+[data-testid="stHeader"] svg *,
+[data-testid="stToolbar"] svg *,
+[data-testid="collapsedControl"] svg *,
+[data-testid="stSidebarCollapsedControl"] svg * {
+    color: #35452d !important;
+    fill: #35452d !important;
+    stroke: #35452d !important;
+    opacity: 1 !important;
+}
+
 </style>
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
