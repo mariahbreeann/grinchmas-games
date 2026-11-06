@@ -37,6 +37,72 @@ st.set_page_config(page_title="Grinchmas Games", layout="wide")
 
 # ----------------------------- THEME ---------------------------------------
 CUSTOM_CSS = """
+
+/* GRINCHMAS SECOND-PASS CONTRAST FIXES */
+
+/* Leaderboard notice */
+[data-testid="stAlert"] {
+    background-color: #eef4d8 !important;
+    border: 2px solid #526b42 !important;
+    color: #35452d !important;
+}
+
+[data-testid="stAlert"] * {
+    color: #35452d !important;
+}
+
+/* Multiple-choice answers and radio labels */
+[data-testid="stRadio"] label,
+[data-testid="stRadio"] label p,
+[data-testid="stRadio"] label span,
+[data-testid="stCheckbox"] label,
+[data-testid="stCheckbox"] label p {
+    color: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Team names and other input labels */
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] p {
+    color: #35452d !important;
+    opacity: 1 !important;
+}
+
+/* Sidebar expand/collapse control */
+[data-testid="collapsedControl"] button,
+[data-testid="stSidebarCollapsedControl"] button,
+[data-testid="stSidebar"] button[aria-label] {
+    color: #9b1725 !important;
+    background-color: #fff8e9 !important;
+    border: 2px solid #9b1725 !important;
+}
+
+/* Scoreboard table backgrounds */
+[data-testid="stTable"] table,
+[data-testid="stTable"] th,
+[data-testid="stTable"] td {
+    background-color: #fff8e9 !important;
+    color: #29251f !important;
+    border-color: #c9b995 !important;
+}
+
+[data-testid="stDataFrame"] {
+    background-color: #fff8e9 !important;
+    color: #29251f !important;
+}
+
+/* Keep table text readable on mobile */
+[data-testid="stDataFrame"] * {
+    color: #29251f !important;
+}
+
+/* Lighten dark-looking form controls */
+[data-testid="stNumberInput"] button {
+    background-color: #fff8e9 !important;
+    color: #29251f !important;
+    border-color: #6b6252 !important;
+}
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800;900&display=swap');
 :root { --grinch:#79b82a; --lime:#d6ed13; --red:#e51d24; --cream:#fff7e8; --evergreen:#17652d; --gold:#f5c62c; --ink:#171717; }
