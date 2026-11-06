@@ -203,6 +203,105 @@ hr { border-color:#d9c9a8 !important; }
     }
 }
 
+/* GRINCHMAS FINAL MOBILE CONTRAST FIXES */
+
+/* Top toolbar icons and controls */
+[data-testid="stHeader"] button,
+[data-testid="stHeader"] button svg,
+[data-testid="stToolbar"] button,
+[data-testid="stToolbar"] button svg {
+    color: #35452d !important;
+    fill: #35452d !important;
+    opacity: 1 !important;
+}
+
+/* Sidebar expand/collapse toggle */
+[data-testid="collapsedControl"],
+[data-testid="stSidebarCollapsedControl"] {
+    background-color: #e6efc9 !important;
+    border: 2px solid #35452d !important;
+    border-radius: 10px !important;
+    opacity: 1 !important;
+}
+
+[data-testid="collapsedControl"] svg,
+[data-testid="stSidebarCollapsedControl"] svg {
+    color: #35452d !important;
+    fill: #35452d !important;
+    opacity: 1 !important;
+}
+
+/* Leaderboard notice */
+[data-testid="stAlert"] {
+    background-color: #e6efc9 !important;
+    border: 2px solid #526b42 !important;
+    color: #29251f !important;
+}
+
+[data-testid="stAlert"] * {
+    color: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Team names and leaderboard points */
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] strong {
+    color: #35452d !important;
+    opacity: 1 !important;
+}
+
+/* Score tables: replace dark backgrounds */
+[data-testid="stTable"],
+[data-testid="stDataFrame"] {
+    background-color: #fff9ed !important;
+    color: #29251f !important;
+}
+
+[data-testid="stTable"] table,
+[data-testid="stDataFrame"] table {
+    background-color: #fff9ed !important;
+    color: #29251f !important;
+}
+
+[data-testid="stTable"] th,
+[data-testid="stTable"] td {
+    background-color: #fff9ed !important;
+    color: #29251f !important;
+    border-color: #d9c9a8 !important;
+}
+
+/* Multiple-choice answers */
+[data-testid="stRadio"] label,
+[data-testid="stRadio"] label p,
+[data-testid="stRadio"] label span {
+    color: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Team setup labels and input text */
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] p,
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input {
+    color: #29251f !important;
+    opacity: 1 !important;
+}
+
+/* Mobile readability */
+@media (max-width: 768px) {
+    [data-testid="stHeader"] {
+        background-color: #fff8e9 !important;
+    }
+
+    [data-testid="stSidebar"] {
+        background-color: #eef5d8 !important;
+    }
+
+    [data-testid="stSidebar"] * {
+        opacity: 1 !important;
+    }
+}
+
 </style>
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
