@@ -37,7 +37,7 @@ st.set_page_config(page_title="Grinchmas Games", layout="wide")
 
 # ----------------------------- THEME ---------------------------------------
 CUSTOM_CSS = """
-
+<style>
 /* GRINCHMAS SECOND-PASS CONTRAST FIXES */
 
 /* Leaderboard notice */
